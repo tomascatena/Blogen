@@ -9,16 +9,21 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/lumen/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
     <title>Bootstrap Theme</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
       <div class="container">
@@ -36,7 +41,7 @@
               <a href="index.html" class="nav-link">Dashboard</a>
             </li>
             <li class="nav-item px-2">
-              <a href="posts.html" class="nav-link">Post</a>
+              <a href="posts.html" class="nav-link">Posts</a>
             </li>
             <li class="nav-item px-2">
               <a href="categories.html" class="nav-link">Categories</a>
@@ -95,7 +100,11 @@
             </a>
           </div>
           <div class="col-md-3">
-            <a href="#" class="btn btn-success btn-block mb-3">
+            <a
+              href="#"
+              class="btn btn-success btn-block mb-3"
+              data-dismiss="modal"
+            >
               <i class="fas fa-lock"></i> Change Password
             </a>
           </div>
@@ -137,7 +146,7 @@
                     <input
                       type="email"
                       class="form-control"
-                      value="toma@tomas.com"
+                      value="tomas@blogen.com"
                     />
                   </div>
                   <div class="form-group">
@@ -167,13 +176,15 @@
       </div>
     </section>
 
+    <section class="mt-5"></section>
     <!-- FOOTER -->
-    <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+    <footer id="main-footer" class="bg-dark text-white mt-auto p-4">
       <div class="container">
         <div class="row">
           <div class="col">
-            <p class="lead text-center">
-              Copyright &copy; <span id="year"></span> Blogen
+            <p class="lead text-center mb-0">
+              Copyright &copy; <span id="year"></span> Blogen <br />
+              Created by Tomás Catena for a course of Brad Traversy
             </p>
           </div>
         </div>
@@ -322,11 +333,14 @@
             </form>
           </div>
           <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">
+              Close
+            </button>
             <button
               id="deleteAccountButton"
-              href="login.html"
               class="btn btn-danger"
               data-dismiss="modal"
+              onclick="window.location.href='/login.html'"
             >
               Delete Account
             </button>
@@ -359,9 +373,9 @@
       CKEDITOR.replace('editor1');
 
       // Delete Account Modal
-      $(document).on('hidden.bs.modal', '#deleteAccountModal', function () {
-        window.location = $('#deleteAccountButton').attr('href');
-      });
+      // $(document).on('hidden.bs.modal', '#deleteAccountModal', function () {
+      //   window.location = $('#deleteAccountButton').attr('href');
+      // });
     </script>
   </body>
 </html>

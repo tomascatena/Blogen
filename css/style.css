@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+.table td,
+.table th {
+  padding: 0.5rem;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+}
+
+.btn {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.table {
+  font-size: 1rem;
+}
+
+.col-md-3 .btn {
+  font-size: 1.1rem;
+}
+
+a.nav-link,
+a.dropdown-item {
+  font-size: 1rem;
+}
+
+.modal label {
+  font-size: 1rem;
+}
+
+.modal button {
+  font-size: 1.1rem;
+}
+
+.modal .modal-title {
+  font-size: 1.6rem;
+}
+
+input.form-control {
+  font-size: 1.2rem;
+}
+
+select.form-control {
+  font-size: 1rem;
+}
+
+.form-check {
+  font-size: 1rem;
+}
