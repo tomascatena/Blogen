@@ -42,11 +42,11 @@ a.dropdown-item {
 }
 
 input.form-control {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 select.form-control {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .form-check {
